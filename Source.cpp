@@ -1,9 +1,16 @@
 #include"AllIncludes.h"
 #include"File.h"
-
+#include"Encoder.h"
 int main()
 {
-	File* file = File::GetFileInstance();
+	//freopen("input.txt","r",stdin);
+	//freopen("output.txt","w",stdout);
+	string text;
+	cin >> text;
+	Encoder *encoder = new Encoder();
+	encoder->constructHuffmanTree(text);
+
+	/*File* file = File::GetFileInstance();
 	system("cls");
 	{
 		char infilename[400];
@@ -20,8 +27,8 @@ int main()
 		else if (infilename[0] != '\0'  && outfilename[0] == '\0')
 			file->CopyFile(infilename);
 		else
-			file->CopyFile(infilename, outfilename);
-		
-	}
+			file->CopyFile(infilename, outfilename);		
+	}*/
+
 	return 0;
 }
