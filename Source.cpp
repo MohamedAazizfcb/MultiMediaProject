@@ -6,7 +6,6 @@ int main()
 {
 	freopen("input.txt","r",stdin);
 	freopen("output.txt","w",stdout);
-	ofstream out("binary.bin", ios::binary);
 	//out.write("11111111", 111);
 	//char a = 65;
 	//cout << a << endl;
@@ -16,7 +15,7 @@ int main()
 		text += " " + x;
 	Encoder encoder; Decoder decoder;
 	encoder.constructHuffmanTree(text);
-	decoder.startDecoding(encoder.getHuffmanTree().top(), encoder.getEncodedText());
+	//decoder.startDecoding(encoder.getHuffmanTree().top(), encoder.getEncodedText());
 	/*File* file = File::GetFileInstance();
 	system("cls");
 	{

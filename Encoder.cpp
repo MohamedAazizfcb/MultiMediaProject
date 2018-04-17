@@ -6,7 +6,7 @@ void Encoder::printEncoded(node*root, string str) {
 		vec.clear();
 		vec.resize(str.size());
 		encode[root->data] = str;
-		cout << root->data << ": " << str << "\n";
+	//	cout << root->data << ": " << str << "\n";
 	}
 	printEncoded(root->left, str + "0");
 	printEncoded(root->right, str + "1");
@@ -14,8 +14,28 @@ void Encoder::printEncoded(node*root, string str) {
 void Encoder::outputEncodedFile(){
 	encodedText = "";
 	for (int i = 0; i < originalText.size(); ++i) {
-		cout << encode[originalText[i]];
+		//cout << encode[originalText[i]];
 		encodedText += encode[originalText[i]];
+	}
+
+	int i = 0, j = 0;
+	
+	for (i = 0; i < encodedText.length(); i += 8)
+	{
+		unsigned char byte = 0;
+		string str8 = "";
+		if (i + 8 < encodedText.length())
+			str8 = encodedText.substr(i, i + 8);
+		else
+			str8 = encodedText.substr(i, encodedText.length());
+		for (unsigned b = 0; b != 8; ++b)
+		{
+			if (b < str8.length())
+				byte |= (str8[b] & 1) << b; // this line was wrong before
+			else
+				byte |= 1 << b;
+		}
+		cout << byte;
 	}
 }
 void Encoder::calculateFrequences(string text) {

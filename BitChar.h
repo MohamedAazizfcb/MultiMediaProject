@@ -7,6 +7,7 @@ public:
 	int shift_count;
 	std::string BITS;
 
+
 	BitChar();
 	void setBITS(string _X);
 	int insertBits(ofstream& outf);

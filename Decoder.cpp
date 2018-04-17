@@ -1,8 +1,9 @@
 #include "Decoder.h"
 
 void Decoder::startDecoding(node*top,string s){
-    string decodedText = "";
-    struct node* curr = top;
+	string decodedText = "";
+    node* curr = top;
+	
     for (int i=0;i<s.size();i++)
     {
         if (s[i] == '0')
