@@ -5,7 +5,7 @@
 class Decoder
 {
 public:
-	Decoder();
+	Decoder(){}
 	void startDecoding(node* top,string s);
 	~Decoder(){}
 };

@@ -1,12 +1,12 @@
 #pragma once
-#include "AllIncludes.h"
+typedef long long ll;
 class node
 {
 public:
 	// character to be stored
 	char data;
 	// Frequency of the character
-	long long freq;
+	ll freq;
 	// Left and right child
 	node *left, *right;
 	node(char data, ll freq);

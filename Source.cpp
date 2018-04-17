@@ -1,15 +1,22 @@
 #include"AllIncludes.h"
 #include"File.h"
 #include"Encoder.h"
+#include "Decoder.h"
 int main()
 {
-	//freopen("input.txt","r",stdin);
-	//freopen("output.txt","w",stdout);
-	string text;
+	freopen("input.txt","r",stdin);
+	freopen("output.txt","w",stdout);
+	ofstream out("binary.bin", ios::binary);
+	//out.write("11111111", 111);
+	//char a = 65;
+	//cout << a << endl;
+	string text, x;
 	cin >> text;
-	Encoder *encoder = new Encoder();
-	encoder->constructHuffmanTree(text);
-
+	while (cin >> x)
+		text += " " + x;
+	Encoder encoder; Decoder decoder;
+	encoder.constructHuffmanTree(text);
+	decoder.startDecoding(encoder.getHuffmanTree().top(), encoder.getEncodedText());
 	/*File* file = File::GetFileInstance();
 	system("cls");
 	{

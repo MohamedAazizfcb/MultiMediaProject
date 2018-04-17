@@ -1,7 +1,7 @@
 #include "Decoder.h"
 
 void Decoder::startDecoding(node*top,string s){
-   string ans = "";
+    string decodedText = "";
     struct node* curr = top;
     for (int i=0;i<s.size();i++)
     {
@@ -9,13 +9,12 @@ void Decoder::startDecoding(node*top,string s){
            curr = curr->left;
         else
            curr = curr->right;
- 
         // reached leaf node
         if (curr->left==NULL && curr->right==NULL)
         {
-            ans += curr->data;
-            curr = top;
+			decodedText += curr->data;
+			curr = top;
         }
     }
-    cout << "\n\n"<<ans;
+	cout << "\n\n" << decodedText;
 }

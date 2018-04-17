@@ -28,7 +28,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v110</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -147,17 +147,23 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AllIncludes.h" />
+    <ClInclude Include="BitChar.h" />
     <ClInclude Include="Decoder.h" />
     <ClInclude Include="Encoder.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="node.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BitChar.cpp" />
     <ClCompile Include="Decoder.cpp" />
     <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="File.cpp" />
     <ClCompile Include="node.cpp" />
     <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+    <Text Include="output.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
