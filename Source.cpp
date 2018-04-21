@@ -1,22 +1,18 @@
 #include"AllIncludes.h"
-#include"File.h"
 #include"Encoder.h"
 #include "Decoder.h"
+
 int main()
 {
-	freopen("input.txt","r",stdin);
-	freopen("output.txt","w",stdout);
-	//out.write("11111111", 111);
-	//char a = 65;
-	//cout << a << endl;
-	string text, x;
-	cin >> text;
-	while (cin >> x)
-		text += " " + x;
+	wstring text = LoadUtf8FileToString(L"DataSet_3.tsv");
+	
 	Encoder encoder; Decoder decoder;
 	encoder.constructHuffmanTree(text);
-	//decoder.startDecoding(encoder.getHuffmanTree().top(), encoder.getEncodedText());
-	/*File* file = File::GetFileInstance();
+	decoder.startDecoding(encoder.getHuffmanTree().top());
+
+	
+	/*
+	File* file = File::GetFileInstance();
 	system("cls");
 	{
 		char infilename[400];
@@ -34,7 +30,10 @@ int main()
 			file->CopyFile(infilename);
 		else
 			file->CopyFile(infilename, outfilename);		
-	}*/
+	}
+
+	
+	*/
 
 	return 0;
 }

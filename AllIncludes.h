@@ -5,6 +5,8 @@
 #include <string>
 #include <cstring>
 #include <iomanip>
+#include <fstream>
+#include <codecvt>
 #include <algorithm>
 #include <vector>
 #include <cmath>
@@ -24,14 +26,6 @@
 #include <unordered_map>
 #include "node.h"
 using namespace std;
-
-
-struct compare {
-	bool operator()(node* l, node* r) {
-		return (l->freq > r->freq);
-	}
-};
-
 #define all(v) (v).begin(),(v).end()
 #define SRT(v) sort(all(v))
 #define rall(v) (v).rbegin(),(v).rend()
@@ -51,6 +45,11 @@ struct compare {
 #define pw(x)	 (x)*(x)
 
 
+struct compare {
+	bool operator()(node* l, node* r) {
+		return (l->freq > r->freq);
+	}
+};
 
 typedef stringstream ss;
 typedef long long ll;
@@ -65,3 +64,6 @@ typedef pair<int, ll> il;
 typedef vector<vector<ii>> vvii;
 typedef vector<vector<il>> vvil;
 typedef priority_queue<node*, vector<node*>, compare> HuffmanTree;
+
+size_t GetSizeOfFile(const wstring& path);
+wstring LoadUtf8FileToString(const wstring& filename);

@@ -6,19 +6,22 @@ class Encoder
 public:
 	Encoder() {	}
 	~Encoder() {}
-	void constructHuffmanTree(string text);
+	void constructHuffmanTree(const wstring & text);
 	HuffmanTree getHuffmanTree();
+	string getFileText();
 	string getEncodedText();
 private:
-	string originalText;
+	wstring originalText;
 	string encodedText;
+	string FileText;
 	HuffmanTree huffmanTree;
-	void calculateFrequences(string text);
-	map<char, string>encode;
-	map<char, ll> freq;
-	vector<bool> vec;
-
+	map<int, string>encode;
+	map<int, ll> freq;
+	vector<string>encodedTree;
+	vector<bool>vec;
+	void encodeTree(node*root);
 	void printEncoded(node*root, string str);
-	void outputEncodedFile();
+	void outputEncodedFile(const wstring & text);
+	void calculateFrequences(const wstring & text);
 };
 

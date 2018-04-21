@@ -1,8 +1,11 @@
 #include "node.h"
 
-node::node(char data, ll freq) {
-	left = right = nullptr;
+
+
+node::node(int data, ll freq)
+{
 	this->data = data;
 	this->freq = freq;
 }
+
 

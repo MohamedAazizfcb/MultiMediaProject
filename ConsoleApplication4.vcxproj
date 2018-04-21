@@ -147,14 +147,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AllIncludes.h" />
-    <ClInclude Include="BitChar.h" />
     <ClInclude Include="Decoder.h" />
     <ClInclude Include="Encoder.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="node.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BitChar.cpp" />
+    <ClCompile Include="AllIncludes.cpp" />
     <ClCompile Include="Decoder.cpp" />
     <ClCompile Include="Encoder.cpp" />
     <ClCompile Include="File.cpp" />
