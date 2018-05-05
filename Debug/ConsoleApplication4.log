@@ -1,5 +1,0 @@
-﻿  Decoder.cpp
-c:\users\mohamed aaziz\desktop\moame\multimediaproject-master\decoder.cpp(6): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
-c:\users\mohamed aaziz\desktop\moame\multimediaproject-master\decoder.cpp(26): warning C4018: '<': signed/unsigned mismatch
-  ConsoleApplication4.vcxproj -> C:\Users\Mohamed Aaziz\Desktop\Moame\MultiMediaProject-master\Debug\ConsoleApplication4.exe
-  ConsoleApplication4.vcxproj -> C:\Users\Mohamed Aaziz\Desktop\Moame\MultiMediaProject-master\Debug\ConsoleApplication4.pdb (Full PDB)
